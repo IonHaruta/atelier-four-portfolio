@@ -14,6 +14,7 @@ const ProjectDetail = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
+      {/* Hero image */}
       <section className="pt-24">
         <div className="w-full overflow-hidden">
           <motion.img
@@ -27,6 +28,7 @@ const ProjectDetail = () => {
         </div>
       </section>
 
+      {/* Info */}
       <section className="px-6 md:px-12 py-16 md:py-24">
         <div className="max-w-3xl">
           <motion.span
@@ -55,6 +57,31 @@ const ProjectDetail = () => {
           </motion.p>
         </div>
       </section>
+
+      {/* Gallery */}
+      {project.gallery.length > 1 && (
+        <section className="px-6 md:px-12 pb-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            {project.gallery.slice(1).map((img, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.7, delay: i * 0.15 }}
+                className="overflow-hidden"
+              >
+                <img
+                  src={img}
+                  alt={`${project.title} — detail ${i + 2}`}
+                  className="w-full aspect-[16/10] object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                />
+              </motion.div>
+            ))}
+          </div>
+        </section>
+      )}
 
       <Footer />
     </div>

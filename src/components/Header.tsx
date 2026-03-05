@@ -8,8 +8,8 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [
-    { to: "/", label: "Portofoliu" },
-    { to: "/about", label: "Despre" },
+    { to: "/", label: "Portfolio" },
+    { to: "/about", label: "About" },
     { to: "/contact", label: "Contact" },
   ];
 
