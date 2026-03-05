@@ -27,10 +27,10 @@ const Contact = () => {
               For collaborations and new projects:
             </p>
             <a
-              href="mailto:hello@atelierfour.com"
+              href="mailto:example@atelierfour.com"
               className="font-display text-2xl md:text-3xl font-light text-foreground hover:text-muted-foreground transition-colors duration-300 block"
             >
-              hello@atelierfour.com
+              example@atelierfour.com
             </a>
           </motion.div>
         </div>

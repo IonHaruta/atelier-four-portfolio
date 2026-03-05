@@ -1,10 +1,23 @@
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
 
 const Index = () => {
+  useEffect(() => {
+    const links = projects.slice(0, 4).map((p) => {
+      const link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "image";
+      link.href = p.image;
+      document.head.appendChild(link);
+      return link;
+    });
+    return () => links.forEach((link) => link.remove());
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />

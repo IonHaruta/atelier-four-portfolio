@@ -14,7 +14,7 @@ const ProjectCard = ({ id, title, subtitle, image, index }: ProjectCardProps) =>
     <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={{ once: true, margin: "100px" }}
       transition={{ duration: 0.7, delay: index * 0.1 }}
     >
       <Link to={`/project/${id}`} className="group block">
@@ -23,7 +23,8 @@ const ProjectCard = ({ id, title, subtitle, image, index }: ProjectCardProps) =>
             src={image}
             alt={title}
             className="w-full aspect-[16/10] object-cover transition-transform duration-700 group-hover:scale-105"
-            loading="lazy"
+            loading="eager"
+            fetchPriority={index < 2 ? "high" : "low"}
           />
         </div>
         <div className="mt-5 flex items-baseline justify-between">
