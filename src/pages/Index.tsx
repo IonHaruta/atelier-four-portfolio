@@ -18,9 +18,9 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="font-display text-5xl md:text-7xl lg:text-8xl font-light leading-[1.05] text-foreground"
           >
-            Designul este creat,
+            Design is crafted,
             <br />
-            <em className="italic font-light">nu asamblat.</em>
+            <em className="italic font-light">not assembled.</em>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -28,7 +28,7 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="mt-8 font-body text-sm md:text-base font-light tracking-wide text-muted-foreground max-w-xl leading-relaxed"
           >
-            Interior design studio — Atemporalitate, Unicitate, Funcționalitate și Eleganță.
+            Interior design studio — Timelessness, Uniqueness, Functionality & Elegance.
           </motion.p>
         </div>
       </section>

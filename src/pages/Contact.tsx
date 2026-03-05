@@ -15,7 +15,7 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             className="font-display text-5xl md:text-7xl font-light text-foreground mb-8"
           >
-            Hai să creăm <em className="italic">împreună.</em>
+            Let's create <em className="italic">together.</em>
           </motion.h1>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -24,7 +24,7 @@ const Contact = () => {
             className="space-y-4"
           >
             <p className="font-body text-sm font-light tracking-wide text-muted-foreground">
-              Pentru colaborări și proiecte noi:
+              For collaborations and new projects:
             </p>
             <a
               href="mailto:hello@atelierfour.com"
