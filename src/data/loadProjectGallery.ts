@@ -12,9 +12,11 @@ import costera5 from "../assets/COSTERA/costera-night-5.jpg";
 import costera18 from "../assets/COSTERA/costera-night-18.jpg";
 import costera19 from "../assets/COSTERA/costera-night-19.jpg";
 
-// Beity - no changes per client
+// Beity
 import beity1 from "../assets/BEITY/Beity_8_19_8489.jpg";
 import beity2 from "../assets/BEITY/Beity_9_18_9981.jpg";
+import beity3 from "../assets/BEITY/tempImageecI7Ye.png";
+
 
 // Inkwell - only these images (from Dropbox)
 import inkwell1 from "../assets/INKWELL/DSC_7601-2.jpg";
@@ -38,7 +40,7 @@ import speir4 from "../assets/SPEIR PILATES/Screenshot 2025-04-09 143109.jpg";
 
 const galleries: Record<string, string[]> = {
   costera: [costera2, costera5, costera18, costera19],
-  beity: [beity1, beity2],
+  beity: [beity1, beity2, beity3],
   inkwell: [inkwell1, inkwell2, inkwell3, inkwell4, inkwell5],
   pvolve: [pvolve1, pvolve2, pvolve3, pvolve4, pvolve5],
   "speir-pilates": [speir1, speir2, speir3, speir4],
