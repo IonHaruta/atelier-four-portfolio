@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import aboutHero from "@/assets/about-hero.jpg";
 
 const pillars = [
   {
@@ -10,7 +9,7 @@ const pillars = [
   },
   {
     title: "Uniqueness",
-    text: "Every project tells a story. History, context, and culture are never decorative elements — they are the foundation. We design with meaning, weaving narrative into every detail so that each space feels personal, intentional, and impossible to replicate.",
+    text: "Every project tells a story. History, context, and culture are never decorative elements — they are the foundation. We design with meaning, weaving narrative into every detail so that each space feels personal and intentional.",
   },
   {
     title: "Functionality",
@@ -27,22 +26,8 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero image */}
-      <section className="pt-24">
-        <div className="w-full h-[50vh] md:h-[65vh] overflow-hidden">
-          <motion.img
-            initial={{ scale: 1.1 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 1.2 }}
-            src={aboutHero}
-            alt="Atelier Four studio"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </section>
-
       {/* Intro */}
-      <section className="px-6 md:px-12 py-20 md:py-28">
+      <section className="px-6 md:px-12 pt-32 pb-20 md:py-28">
         <div className="max-w-3xl mx-auto">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -89,21 +74,6 @@ const About = () => {
               </p>
             </motion.div>
           ))}
-        </div>
-      </section>
-
-      {/* Fine art background */}
-      <section className="px-6 md:px-12 pb-20 md:pb-28">
-        <div className="max-w-3xl mx-auto">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="font-body text-sm md:text-base font-light leading-relaxed text-muted-foreground"
-          >
-            With a background rooted in fine art — painting, drawing, and color theory — our approach is painterly and intuitive yet grounded in discipline and technical precision.
-          </motion.p>
         </div>
       </section>
 

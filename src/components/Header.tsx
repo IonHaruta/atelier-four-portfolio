@@ -2,13 +2,15 @@ import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Logo from "@/components/Logo";
 
 const Header = () => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [
-    { to: "/", label: "Portfolio" },
+    { to: "/", label: "Home" },
+    { to: "/portfolio", label: "Portfolio" },
     { to: "/about", label: "About" },
     { to: "/contact", label: "Contact" },
   ];
@@ -21,9 +23,7 @@ const Header = () => {
       className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-sm"
     >
       <div className="flex items-center justify-between px-6 md:px-12 py-5">
-        <Link to="/" className="font-display text-2xl md:text-3xl font-light tracking-wider text-foreground">
-          Atelier Four
-        </Link>
+        <Logo />
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-10">
