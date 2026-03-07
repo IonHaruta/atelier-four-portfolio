@@ -14,24 +14,29 @@ const Contact = () => {
     setStatus("submitting");
 
     const form = e.currentTarget;
-    const formData = new FormData(form);
+    const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
     try {
-      // Set VITE_FORMSPREE_ID in .env with your Formspree form ID (from formspree.io)
-      const formId = import.meta.env.VITE_FORMSPREE_ID || "YOUR_FORM_ID";
-      const response = await fetch(`https://formspree.io/f/${formId}`, {
+      const response = await fetch(`${apiUrl}/api/contact/`, {
         method: "POST",
-        body: formData,
-        headers: { Accept: "application/json" },
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: (form.elements.namedItem("name") as HTMLInputElement)?.value,
+          email: (form.elements.namedItem("email") as HTMLInputElement)?.value,
+          message: (form.elements.namedItem("message") as HTMLTextAreaElement)?.value,
+        }),
       });
 
       if (response.ok) {
         setStatus("success");
         form.reset();
       } else {
+        const errData = await response.json().catch(() => ({}));
+        console.error("Contact API error:", response.status, errData);
         setStatus("error");
       }
-    } catch {
+    } catch (err) {
+      console.error("Contact form failed:", err);
       setStatus("error");
     }
   };
