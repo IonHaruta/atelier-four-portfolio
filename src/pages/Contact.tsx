@@ -54,54 +54,16 @@ const Contact = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="font-body text-sm font-light tracking-wide text-muted-foreground mb-4"
+            className="font-body text-sm font-light tracking-wide text-muted-foreground mb-12"
           >
             For inquiries and collaborations, please complete the form below or reach out directly.
           </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.25 }}
-            className="font-body text-sm font-light tracking-wide text-muted-foreground mb-12"
-          >
-            Atelier Four works on hospitality projects across the world.
-          </motion.p>
-
-          {/* Contact info */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="mb-12 space-y-3"
-          >
-            <p className="font-body text-sm font-light text-muted-foreground">
-              <span className="uppercase tracking-[0.15em] text-foreground">Email:</span>{" "}
-              <a
-                href="mailto:info@atelierfourdesign.com"
-                className="hover:text-foreground transition-colors"
-              >
-                info@atelierfourdesign.com
-              </a>
-            </p>
-            <p className="font-body text-sm font-light text-muted-foreground">
-              <span className="uppercase tracking-[0.15em] text-foreground">Phone:</span>{" "}
-              <a
-                href="tel:+17735200500"
-                className="hover:text-foreground transition-colors"
-              >
-                (773) 520-0500
-              </a>
-            </p>
-            <p className="font-body text-sm font-light text-muted-foreground">
-              <span className="uppercase tracking-[0.15em] text-foreground">Location:</span> Miami, FL
-            </p>
-          </motion.div>
 
           {/* Contact form */}
           <motion.form
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.35 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
             onSubmit={handleSubmit}
             className="space-y-6"
           >
@@ -163,6 +125,45 @@ const Contact = () => {
               {status === "submitting" ? "Sending..." : "Send Message"}
             </Button>
           </motion.form>
+
+          {/* Contact info */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mt-12 mb-12 space-y-3"
+          >
+            <p className="font-body text-sm font-light text-muted-foreground">
+              <span className="uppercase tracking-[0.15em] text-foreground">Email:</span>{" "}
+              <a
+                href="mailto:info@atelierfourdesign.com"
+                className="hover:text-foreground transition-colors"
+              >
+                info@atelierfourdesign.com
+              </a>
+            </p>
+            <p className="font-body text-sm font-light text-muted-foreground">
+              <span className="uppercase tracking-[0.15em] text-foreground">Phone:</span>{" "}
+              <a
+                href="tel:+17735200500"
+                className="hover:text-foreground transition-colors"
+              >
+                (773) 520-0500
+              </a>
+            </p>
+            <p className="font-body text-sm font-light text-muted-foreground">
+              <span className="uppercase tracking-[0.15em] text-foreground">Location:</span> Miami, FL
+            </p>
+          </motion.div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.45 }}
+            className="font-body text-sm font-light tracking-wide text-muted-foreground"
+          >
+            Atelier Four works on hospitality projects across the world.
+          </motion.p>
         </div>
       </section>
 

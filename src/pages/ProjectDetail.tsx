@@ -126,6 +126,13 @@ const ProjectDetail = () => {
         </section>
       )}
 
+      {/* DXU disclaimer - bottom right, after photos */}
+      <section className="px-6 md:px-12 pb-24">
+        <p className="font-body text-[10px] md:text-xs text-muted-foreground text-right">
+          Designed while employed at DXU Architects. Portfolio display only; all rights remain with DXU Architects.
+        </p>
+      </section>
+
       {/* Lightbox */}
       <AnimatePresence>
         {lightboxIndex !== null && displayGallery[lightboxIndex] && (
