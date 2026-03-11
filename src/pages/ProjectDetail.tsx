@@ -128,9 +128,9 @@ const ProjectDetail = () => {
 
       {/* DXU disclaimer - bottom right, after photos */}
       <section className="px-6 md:px-12 pb-24">
-        <p className="font-body text-[10px] md:text-xs text-muted-foreground text-right">
-          Designed while employed at DXU Architects. Portfolio display only; all rights remain with DXU Architects.
-        </p>
+<p className="font-body text-[7px] md:text-[8px] text-muted-foreground text-right">
+            Designed while employed at DXU Architects. Portfolio display only; all rights remain with DXU Architects.
+          </p>
       </section>
 
       {/* Lightbox */}
