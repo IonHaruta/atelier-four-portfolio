@@ -3,7 +3,7 @@ services:
     image: ${CI_REGISTRY_IMAGE}/frontend:${IMAGE_TAG:-latest}
     restart: unless-stopped
     ports:
-      - "80:80"
+      - "8201:80"
     depends_on:
       - backend
 
