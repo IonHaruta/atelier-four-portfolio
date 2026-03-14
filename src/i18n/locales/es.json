@@ -1,0 +1,87 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "portfolio": "Portafolio",
+    "about": "Nosotros",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "copyright": "© {{year}} Atelier Four. Todos los derechos reservados."
+  },
+  "contact": {
+    "title": "Contacto",
+    "intro": "Para consultas y colaboraciones, complete el formulario a continuación o contáctenos directamente.",
+    "name": "Nombre",
+    "email": "Email",
+    "message": "Mensaje",
+    "namePlaceholder": "Su nombre",
+    "emailPlaceholder": "su@email.com",
+    "messagePlaceholder": "Cuéntenos sobre su proyecto...",
+    "success": "¡Gracias! Su mensaje ha sido enviado.",
+    "error": "Algo salió mal. Por favor intenta de nuevo o escríbenos directamente.",
+    "send": "Enviar mensaje",
+    "sending": "Enviando...",
+    "emailLabel": "Email",
+    "phoneLabel": "Teléfono",
+    "locationLabel": "Ubicación",
+    "hospitality": "Atelier Four trabaja en proyectos de hospitalidad en todo el mundo."
+  },
+  "portfolio": {
+    "title": "Portafolio",
+    "categories": {
+      "restaurants-bars": "Restaurantes y bares",
+      "wellness": "Bienestar"
+    }
+  },
+  "about": {
+    "hero": "El diseño es una forma de arte antes que un servicio.",
+    "intro1": "Un atelier es un lugar donde el artista refina su oficio: donde las ideas se estudian, se superponen y cobran vida con intención.",
+    "intro2": "El \"Cuatro\" representa los cuatro pilares que fundamentan cada espacio que creamos: Atemporalidad, Singularidad, Funcionalidad y Elegancia.",
+    "closing": "En Atelier Four, el diseño se crea, no se ensambla. Se compone con el mismo cuidado que una obra de arte: en capas, estudiado y creado para perdurar.",
+    "pillars": {
+      "timelessness": {
+        "title": "Atemporalidad",
+        "text": "No perseguimos tendencias. Diseñamos pensando en la longevidad: espacios arraigados en la proporción, la integridad de los materiales y la artesanía que perdurará décadas. Nuestro trabajo está hecho para envejecer con belleza, ser vivido y transmitido."
+      },
+      "uniqueness": {
+        "title": "Singularidad",
+        "text": "Cada proyecto cuenta una historia. La historia, el contexto y la cultura nunca son elementos decorativos: son la base. Diseñamos con significado, tejiendo narrativa en cada detalle para que cada espacio sea personal e intencional."
+      },
+      "functionality": {
+        "title": "Funcionalidad",
+        "text": "La belleza sin propósito está incompleta. Cada línea, cada material y cada ubicación son deliberados. Nada es un añadido. Un espacio no solo debe inspirar: debe servir, fluir y apoyar la forma en que se vive."
+      },
+      "elegance": {
+        "title": "Elegancia",
+        "text": "La elegancia es contención. Es equilibrio, proporción y confianza. No exige atención; la gana en silencio."
+      }
+    }
+  },
+  "projects": {
+    "costera": {
+      "subtitle": "Restaurante y lounge",
+      "description": "Costera Cocina Tulum — Restaurante y lounge mexicano moderno. El diseño de Costera captura una fusión vibrante de la tradición costera mexicana y la cultura refinada del lounge."
+    },
+    "beity": {
+      "subtitle": "Restaurante libanés",
+      "description": "Restaurante libanés — \"Beity\" en árabe significa \"Mi hogar\". Combinando la tradición libanesa atemporal con diseño moderno en Fulton Market de Chicago. Materiales cálidos, líneas limpias e iluminación íntima crean un espacio auténtico y acogedor."
+    },
+    "inkwell": {
+      "subtitle": "Speakeasy y bar",
+      "description": "Un speakeasy oculto con el encanto atemporal de un pub inglés refinado. Inkwell es un speakeasy escondido diseñado con influencia de pub inglés: tonos de madera ricos, asientos de cuero acolchado e iluminación cálida."
+    },
+    "pvolve": {
+      "subtitle": "Fitness boutique",
+      "description": "Fitness boutique moderno y empoderador. Pvolve se despliega como un retiro de bienestar, donde cada superficie y sombra están diseñadas para despertar energía, inspirar fluidez y celebrar la belleza del movimiento."
+    },
+    "speir-pilates": {
+      "subtitle": "Estudio de pilates",
+      "description": "Un moderno estudio de pilates inspirado en California. El diseño de Speir Pilates se inspira en la estética relajada de California: luz natural, tonos de madera cálidos y elementos minimalistas."
+    }
+  },
+  "disclaimer": "Diseñado durante la empleación en DXU Architects. Solo para portafolio; todos los derechos pertenecen a DXU Architects.",
+  "notFound": {
+    "title": "¡Ups! Página no encontrada",
+    "back": "Volver al inicio"
+  }
+}

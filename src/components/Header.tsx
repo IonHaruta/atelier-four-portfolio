@@ -2,17 +2,26 @@ import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import Logo from "@/components/Logo";
 
+const languages = [
+  { code: "en", label: "EN" },
+  { code: "ru", label: "RU" },
+  { code: "es", label: "ES" },
+  { code: "it", label: "IT" },
+] as const;
+
 const Header = () => {
+  const { t, i18n } = useTranslation();
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const links = [
-    { to: "/", label: "Home" },
-    { to: "/portfolio", label: "Portfolio" },
-    { to: "/about", label: "About" },
-    { to: "/contact", label: "Contact" },
+    { to: "/", labelKey: "nav.home" },
+    { to: "/portfolio", labelKey: "nav.portfolio" },
+    { to: "/about", labelKey: "nav.about" },
+    { to: "/contact", labelKey: "nav.contact" },
   ];
 
   return (
@@ -37,9 +46,24 @@ const Header = () => {
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              {link.label}
+              {t(link.labelKey)}
             </Link>
           ))}
+          <div className="flex gap-2 ml-4">
+            {languages.map((lang) => (
+              <button
+                key={lang.code}
+                onClick={() => i18n.changeLanguage(lang.code)}
+                className={`font-body text-xs tracking-wider uppercase px-2 py-1 transition-colors ${
+                  i18n.language === lang.code
+                    ? "text-foreground font-medium"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {lang.label}
+              </button>
+            ))}
+          </div>
         </nav>
 
         {/* Mobile toggle */}
@@ -69,9 +93,22 @@ const Header = () => {
                   : "text-muted-foreground"
               }`}
             >
-              {link.label}
+              {t(link.labelKey)}
             </Link>
           ))}
+          <div className="flex gap-3 pt-4 border-t border-border">
+            {languages.map((lang) => (
+              <button
+                key={lang.code}
+                onClick={() => { i18n.changeLanguage(lang.code); setMenuOpen(false); }}
+                className={`font-body text-sm uppercase ${
+                  i18n.language === lang.code ? "text-foreground font-medium" : "text-muted-foreground"
+                }`}
+              >
+                {lang.label}
+              </button>
+            ))}
+          </div>
         </motion.nav>
       )}
     </motion.header>

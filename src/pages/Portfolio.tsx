@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProjectCard from "@/components/ProjectCard";
 import { projects, projectCategories } from "@/data/projects";
 
 const Portfolio = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     const links = projects.slice(0, 4).map((p) => {
       const link = document.createElement("link");
@@ -30,7 +32,7 @@ const Portfolio = () => {
           transition={{ duration: 0.8 }}
           className="font-display text-5xl md:text-7xl font-light text-foreground"
         >
-          Portfolio
+          {t("portfolio.title")}
         </motion.h1>
       </section>
 
@@ -49,7 +51,7 @@ const Portfolio = () => {
               className="mb-16 md:mb-24"
             >
               <h2 className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground mb-8">
-                {category.label}
+                {t(`portfolio.categories.${category.id}`)}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
                 {categoryProjects.map((project, index) => (
@@ -57,7 +59,7 @@ const Portfolio = () => {
                     key={project.id}
                     id={project.id}
                     title={project.title}
-                    subtitle={project.subtitle}
+                    subtitle={t(`projects.${project.id}.subtitle`)}
                     image={project.image}
                     index={index}
                   />

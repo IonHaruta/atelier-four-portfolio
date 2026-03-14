@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Input } from "@/components/ui/input";
@@ -7,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -53,7 +55,7 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             className="font-display text-5xl md:text-7xl font-light text-foreground mb-8"
           >
-            Contact
+            {t("contact.title")}
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -61,7 +63,7 @@ const Contact = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="font-body text-sm font-light tracking-wide text-muted-foreground mb-12"
           >
-            For inquiries and collaborations, please complete the form below or reach out directly.
+            {t("contact.intro")}
           </motion.p>
 
           {/* Contact form */}
@@ -74,51 +76,51 @@ const Contact = () => {
           >
             <div>
               <label htmlFor="name" className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground block mb-2">
-                Name
+                {t("contact.name")}
               </label>
               <Input
                 id="name"
                 name="name"
                 type="text"
                 required
-                placeholder="Your name"
+                placeholder={t("contact.namePlaceholder")}
                 className="font-body bg-background border-border"
               />
             </div>
             <div>
               <label htmlFor="email" className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground block mb-2">
-                Email
+                {t("contact.email")}
               </label>
               <Input
                 id="email"
                 name="email"
                 type="email"
                 required
-                placeholder="your@email.com"
+                placeholder={t("contact.emailPlaceholder")}
                 className="font-body bg-background border-border"
               />
             </div>
             <div>
               <label htmlFor="message" className="font-body text-xs tracking-[0.15em] uppercase text-muted-foreground block mb-2">
-                Message
+                {t("contact.message")}
               </label>
               <Textarea
                 id="message"
                 name="message"
                 required
-                placeholder="Tell us about your project..."
+                placeholder={t("contact.messagePlaceholder")}
                 rows={5}
                 className="font-body bg-background border-border resize-none"
               />
             </div>
             {status === "success" && (
               <p className="font-body text-sm text-green-600">
-                Thank you! Your message has been sent.
+                {t("contact.success")}
               </p>
             )}
             {status === "error" && (
               <p className="font-body text-sm text-red-600">
-                Something went wrong. Please try again or email us directly.
+                {t("contact.error")}
               </p>
             )}
             <Button
@@ -127,7 +129,7 @@ const Contact = () => {
               variant="outline"
               className="font-body tracking-[0.15em] uppercase"
             >
-              {status === "submitting" ? "Sending..." : "Send Message"}
+              {status === "submitting" ? t("contact.sending") : t("contact.send")}
             </Button>
           </motion.form>
 
@@ -139,7 +141,7 @@ const Contact = () => {
             className="mt-12 mb-12 space-y-3"
           >
             <p className="font-body text-sm font-light text-muted-foreground">
-              <span className="uppercase tracking-[0.15em] text-foreground">Email:</span>{" "}
+              <span className="uppercase tracking-[0.15em] text-foreground">{t("contact.emailLabel")}:</span>{" "}
               <a
                 href="mailto:info@atelierfourdesign.com"
                 className="hover:text-foreground transition-colors"
@@ -148,7 +150,7 @@ const Contact = () => {
               </a>
             </p>
             <p className="font-body text-sm font-light text-muted-foreground">
-              <span className="uppercase tracking-[0.15em] text-foreground">Phone:</span>{" "}
+              <span className="uppercase tracking-[0.15em] text-foreground">{t("contact.phoneLabel")}:</span>{" "}
               <a
                 href="tel:+17735200500"
                 className="hover:text-foreground transition-colors"
@@ -157,7 +159,7 @@ const Contact = () => {
               </a>
             </p>
             <p className="font-body text-sm font-light text-muted-foreground">
-              <span className="uppercase tracking-[0.15em] text-foreground">Location:</span> Miami, FL
+              <span className="uppercase tracking-[0.15em] text-foreground">{t("contact.locationLabel")}:</span> Miami, FL
             </p>
           </motion.div>
 
@@ -167,7 +169,7 @@ const Contact = () => {
             transition={{ duration: 0.8, delay: 0.45 }}
             className="font-body text-sm font-light tracking-wide text-muted-foreground"
           >
-            Atelier Four works on hospitality projects across the world.
+            {t("contact.hospitality")}
           </motion.p>
         </div>
       </section>

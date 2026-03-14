@@ -1,6 +1,7 @@
 import { useParams, Navigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useCallback, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -8,6 +9,7 @@ import { projects } from "@/data/projects";
 import { loadProjectGallery } from "@/data/loadProjectGallery";
 
 const ProjectDetail = () => {
+  const { t } = useTranslation();
   const { id } = useParams<{ id: string }>();
   const project = projects.find((p) => p.id === id);
   const [gallery, setGallery] = useState<string[]>([]);
@@ -79,13 +81,13 @@ const ProjectDetail = () => {
       <section className="px-6 md:px-12 py-16 md:py-24">
         <div className="max-w-3xl">
           <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground">
-            {project.subtitle}
+            {t(`projects.${project.id}.subtitle`)}
           </motion.span>
           <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.4 }} className="font-display text-5xl md:text-7xl font-light text-foreground mt-3 mb-8">
             {project.title}
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.6 }} className="font-body text-sm md:text-base font-light leading-relaxed text-muted-foreground max-w-2xl">
-            {project.description}
+            {t(`projects.${project.id}.description`)}
           </motion.p>
         </div>
       </section>
@@ -128,8 +130,8 @@ const ProjectDetail = () => {
 
       {/* DXU disclaimer - bottom right, after photos */}
       <section className="px-6 md:px-12 pb-24">
-<p className="font-body text-[7px] md:text-[8px] text-muted-foreground text-right">
-            Designed while employed at DXU Architects. Portfolio display only; all rights remain with DXU Architects.
+          <p className="font-body text-[7px] md:text-[8px] text-muted-foreground text-right">
+            {t("disclaimer")}
           </p>
       </section>
 

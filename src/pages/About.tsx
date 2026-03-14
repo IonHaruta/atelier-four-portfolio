@@ -1,27 +1,12 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const pillars = [
-  {
-    title: "Timelessness",
-    text: "We do not chase trends. We design with longevity in mind — spaces rooted in proportion, material integrity, and craftsmanship that will endure for decades. Our work is meant to age beautifully, to be lived in, and to be passed down.",
-  },
-  {
-    title: "Uniqueness",
-    text: "Every project tells a story. History, context, and culture are never decorative elements — they are the foundation. We design with meaning, weaving narrative into every detail so that each space feels personal and intentional.",
-  },
-  {
-    title: "Functionality",
-    text: "Beauty without purpose is incomplete. Every line, every material, and every placement is deliberate. Nothing is an afterthought. A space must not only inspire — it must serve, flow, and support the way it is lived in.",
-  },
-  {
-    title: "Elegance",
-    text: "Elegance is restraint. It is balance, proportion, and confidence. It does not demand attention; it earns it quietly.",
-  },
-];
+const pillarKeys = ["timelessness", "uniqueness", "functionality", "elegance"] as const;
 
 const About = () => {
+  const { t } = useTranslation();
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -36,7 +21,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="font-display text-4xl md:text-6xl font-light leading-tight text-foreground mb-10"
           >
-            Design is an art form before it is a service.
+            {t("about.hero")}
           </motion.h1>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -45,12 +30,8 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6 font-body text-sm md:text-base font-light leading-relaxed text-muted-foreground"
           >
-            <p>
-              An atelier is a place where an artist refines their craft — where ideas are studied, layered, and brought to life with intention.
-            </p>
-            <p>
-              The "Four" represents the four pillars that ground every space we create: Timelessness, Uniqueness, Functionality, and Elegance.
-            </p>
+            <p>{t("about.intro1")}</p>
+            <p>{t("about.intro2")}</p>
           </motion.div>
         </div>
       </section>
@@ -58,19 +39,19 @@ const About = () => {
       {/* Pillars */}
       <section className="px-6 md:px-12 pb-20 md:pb-28">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
-          {pillars.map((pillar, i) => (
+          {pillarKeys.map((key, i) => (
             <motion.div
-              key={pillar.title}
+              key={key}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: i * 0.1 }}
             >
               <h3 className="font-display text-2xl md:text-3xl font-light text-foreground mb-4 italic">
-                {pillar.title}
+                {t(`about.pillars.${key}.title`)}
               </h3>
               <p className="font-body text-sm font-light leading-relaxed text-muted-foreground">
-                {pillar.text}
+                {t(`about.pillars.${key}.text`)}
               </p>
             </motion.div>
           ))}
@@ -87,7 +68,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="font-display text-2xl md:text-3xl font-light leading-relaxed text-foreground italic"
           >
-            At Atelier Four, design is crafted, not assembled. It is composed with the same care as a work of art — layered, studied, and created to endure.
+            {t("about.closing")}
           </motion.p>
         </div>
       </section>
