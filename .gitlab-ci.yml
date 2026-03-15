@@ -27,7 +27,7 @@ build_frontend:
     - export IMAGE="$CI_REGISTRY_IMAGE/frontend"
     - export TAG_SHA="${CI_COMMIT_SHORT_SHA}"
     - export TAG_REF="${CI_COMMIT_REF_SLUG}"
-    - docker build --pull -f Dockerfile -t "$IMAGE:$TAG_SHA" -t "$IMAGE:$TAG_REF" --build-arg VITE_BASE=/ --build-arg VITE_API_URL= .
+    - docker build --pull -f Dockerfile -t "$IMAGE:$TAG_SHA" -t "$IMAGE:$TAG_REF" --build-arg VITE_BASE=/ --build-arg VITE_FORMSPREE_ID=${VITE_FORMSPREE_ID:-mpqyjkdp} .
     - docker push "$IMAGE:$TAG_SHA"
     - docker push "$IMAGE:$TAG_REF"
     - |

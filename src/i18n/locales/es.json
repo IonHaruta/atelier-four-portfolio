@@ -1,7 +1,7 @@
 {
   "nav": {
     "home": "Inicio",
-    "portfolio": "Portafolio",
+    "portfolio": "Portfolio",
     "about": "Nosotros",
     "contact": "Contacto"
   },
@@ -10,7 +10,7 @@
   },
   "contact": {
     "title": "Contacto",
-    "intro": "Para consultas y colaboraciones, complete el formulario a continuación o contáctenos directamente.",
+    "intro": "Para consultas y colaboraciones, rellene el formulario a continuación o contáctenos directamente.",
     "name": "Nombre",
     "email": "Email",
     "message": "Mensaje",
@@ -18,16 +18,16 @@
     "emailPlaceholder": "su@email.com",
     "messagePlaceholder": "Cuéntenos sobre su proyecto...",
     "success": "¡Gracias! Su mensaje ha sido enviado.",
-    "error": "Algo salió mal. Por favor intenta de nuevo o escríbenos directamente.",
+    "error": "Algo ha ido mal. Por favor, intente de nuevo o escríbanos directamente.",
     "send": "Enviar mensaje",
     "sending": "Enviando...",
     "emailLabel": "Email",
     "phoneLabel": "Teléfono",
     "locationLabel": "Ubicación",
-    "hospitality": "Atelier Four trabaja en proyectos de hospitalidad en todo el mundo."
+    "hospitality": "Atelier Four trabaja en proyectos de hostelería en todo el mundo."
   },
   "portfolio": {
-    "title": "Portafolio",
+    "title": "Portfolio",
     "categories": {
       "restaurants-bars": "Restaurantes y bares",
       "wellness": "Bienestar"
@@ -45,7 +45,7 @@
       },
       "uniqueness": {
         "title": "Singularidad",
-        "text": "Cada proyecto cuenta una historia. La historia, el contexto y la cultura nunca son elementos decorativos: son la base. Diseñamos con significado, tejiendo narrativa en cada detalle para que cada espacio sea personal e intencional."
+        "text": "Cada proyecto cuenta una historia. La historia, el contexto y la cultura nunca son elementos decorativos: son la base. Diseñamos con significado, tejiendo la narrativa en cada detalle para que cada espacio sea personal e intencional."
       },
       "functionality": {
         "title": "Funcionalidad",
@@ -79,9 +79,9 @@
       "description": "Un moderno estudio de pilates inspirado en California. El diseño de Speir Pilates se inspira en la estética relajada de California: luz natural, tonos de madera cálidos y elementos minimalistas."
     }
   },
-  "disclaimer": "Diseñado durante la empleación en DXU Architects. Solo para portafolio; todos los derechos pertenecen a DXU Architects.",
+  "disclaimer": "Diseñado durante su empleo en DXU Architects. Solo para portfolio; todos los derechos pertenecen a DXU Architects.",
   "notFound": {
-    "title": "¡Ups! Página no encontrada",
+    "title": "¡Vaya! Página no encontrada",
     "back": "Volver al inicio"
   }
 }
